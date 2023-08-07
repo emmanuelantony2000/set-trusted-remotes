@@ -7,7 +7,7 @@
     "dev": "hardhat node"
   },
   "devDependencies": {
-    "@layerzerolabs/lz-sdk": "0.0.5",
+    "@layerzerolabs/lz-sdk": "0.0.34",
     "@nomiclabs/hardhat-ethers": "2.0.5",
     "@nomiclabs/hardhat-etherscan": "3.0.3",
     "@nomiclabs/hardhat-solhint": "^2.0.0",

@@ -15,7 +15,7 @@ import "./tasks"
 import {HardhatUserConfig} from "hardhat/types"
 import {accounts, ChainId, setupNetwork, setupNetworks} from "@layerzerolabs/lz-sdk"
 
-const config: HardhatUserConfig = {
+const config = {
 
     solidity: {
         version: "0.8.4",
@@ -67,6 +67,20 @@ const config: HardhatUserConfig = {
             [ChainId.OPTIMISM_KOVAN, {rpcIndex: 0}],
             [ChainId.FANTOM_TESTNET, {rpcIndex: 0}]
         ]),
+
+        ...setupNetwork(
+            {
+                url: `https://evm.kava.io/`,
+            },
+            [ChainId.KAVA]
+        ),
+
+        ...setupNetwork(
+            {
+                url: `https://evm.testnet.kava.io/`,
+            },
+            [ChainId.KAVA_TESTNET]
+        ),
 
         // note: setup a single rpc like this. (be sure to comment out the above)
         // https://rpc.ftm.tools
